@@ -1,22 +1,17 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\DeleteUserForm;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
+use App\Livewire\Settings\Users\DeleteUser;
+use App\Livewire\Settings\Users\ListUsers;
+use App\Livewire\Settings\Users\EditUser;
+use App\Livewire\Settings\Users\RegisterUser;
 use Illuminate\Support\Facades\Route;
-
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
 
 Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('home');
-
-// Route::view('dashboard', 'dashboard')
-//     ->middleware(['auth', 'verified'])
-//     ->name('dashboard');
 
 Route::middleware(['auth'])->group(function ()
 {
@@ -25,7 +20,19 @@ Route::middleware(['auth'])->group(function ()
     Route::get('settings/profile', Profile::class)->name('settings.profile');
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/delete', DeleteUserForm::class)->name('settings.delete');
-    // Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
+    Route::group(
+        [
+            'prefix' => 'settings/users',
+            'as' => 'settings.users.'
+        ],
+        function ()
+        {
+            Route::get('list', ListUsers::class)->name('list');
+            Route::get('edit/{id}', EditUser::class)->name('edit');
+            Route::get('register', RegisterUser::class)->name('register');
+            Route::get('delete/{id}', DeleteUser::class)->name('delete');
+        }
+    );
 });
 
 require __DIR__ . '/auth.php';

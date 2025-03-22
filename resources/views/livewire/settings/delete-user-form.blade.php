@@ -6,6 +6,7 @@
             subtitle="{{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}"
             title="{{ __('Are you sure you want to delete your account?') }}" wire:model="delModal">
             <x-form no-separator wire:submit="deleteUser">
+                @csrf
                 <x-password label="{{ __('Password') }}" right wire:model="password" />
                 {{-- Notice we are using now the `actions` slot from `x-form`, not from modal --}}
                 <x-slot:actions>

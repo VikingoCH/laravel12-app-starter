@@ -1,3 +1,4 @@
+<!---- NOT USED ---->
 <div class="flex flex-col gap-6">
     <x-auth-header :description="__('Enter your details below to create your account')" :title="__('Create an account')" />
 
@@ -17,6 +18,8 @@
 
         <x-password label="{{ __('Confirm password') }}" placeholder="{{ __('Confirm password') }}" required right
             wire:model="password_confirmation" />
+
+        <x-checkbox label="Admin rights" wire:model="isAdmin" />
 
         <x-button class="btn-accent w-full" label="{{ __('Create account') }}" type="submit" />
     </x-form>

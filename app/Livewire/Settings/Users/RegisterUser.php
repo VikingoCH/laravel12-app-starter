@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Settings\Users;
 
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
-use phpDocumentor\Reflection\Types\Boolean;
 
-#[Layout('components.layouts.auth')]
-class RegisterOld extends Component
+class RegisterUser extends Component
 {
     public string $name = '';
 
@@ -22,7 +20,8 @@ class RegisterOld extends Component
 
     public string $password_confirmation = '';
 
-    public $isAdmin = false;
+    public bool $isAdmin = false;
+
 
     /**
      * Handle an incoming registration request.
@@ -36,11 +35,15 @@ class RegisterOld extends Component
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
+        $validated['is_admin'] = $this->isAdmin;
 
         event(new Registered(($user = User::create($validated))));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        $this->redirect(route('home', absolute: false), navigate: true);
+        // $this->redirect(route('home', absolute: false), navigate: true);
+
+        // $this->success(__('User Created Successfully'));
+        $this->redirect(route('settings.users.list'));
     }
 }

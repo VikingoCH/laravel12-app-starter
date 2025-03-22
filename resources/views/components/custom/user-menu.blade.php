@@ -7,5 +7,10 @@
     </x-slot:trigger>
     <x-menu-item :href="route('settings.profile')" icon="o-user" title="Profile" />
     <x-menu-separator />
-    <x-menu-item :href="route('logout')" icon="o-power" title="Log Out" />
+    <div>
+        <x-form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <x-button class="btn-ghost btn-sm w-full" icon="o-power" type="submit">Log Out</x-button>
+        </x-form>
+    </div>
 </x-dropdown>
