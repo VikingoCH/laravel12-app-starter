@@ -12,7 +12,7 @@ use Livewire\Component;
 use phpDocumentor\Reflection\Types\Boolean;
 
 #[Layout('components.layouts.auth')]
-class RegisterOld extends Component
+class Register extends Component
 {
     public string $name = '';
 
