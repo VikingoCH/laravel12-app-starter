@@ -4,19 +4,16 @@ Laravel Base template based on Laravel 12 livewire starter kit.
 
 Template for a personal App where user must be authenticad to get acces to the application. Only Admin user can add new users. 
 
-Default Flux UI components library used by livewire starter kit is complete replaced by MaryUI.
+Default Flux UI components library used by livewire starter kit is complete replaced by MaryUI, i.e. FluxUI components are not used at all.
 
 ## Authorization
-Minimalist and simple authorizaiton implementation. 
+Minimalist and simple authorization implementation. Admin role is manage by added column is_admin (Boolean) in users table.
+
+Only one permission "manage_users" is defined and handled by Laravel Gates. 
 
 ### roles
 - Admin:
-  - Manage App setting
-  - Add / Delete users
-  - View / Add / Edit / Delete all records in DB
-- User:
-  - View all records
-  - Add / Edit records in DB
+  - Manage / Register / Remove users
 
 ### Default users
 ___

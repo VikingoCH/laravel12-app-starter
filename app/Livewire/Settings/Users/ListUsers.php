@@ -13,6 +13,7 @@ class ListUsers extends Component
 
     public function mount(): void
     {
+        $this->authorize('manage_users');
         $this->users = User::all();
         $this->headers = [
             // ['key' => 'id', 'label' => '#'],

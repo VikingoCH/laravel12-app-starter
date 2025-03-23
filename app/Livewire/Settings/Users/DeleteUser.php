@@ -19,15 +19,15 @@ class DeleteUser extends Component
 
     public function mount($id): void
     {
+        $this->authorize('manage_users');
+
         $this->user = User::find($id);
-        // $this->userId = $user->id;
-        // $this->name = $user->name;
-        // $this->email = $user->email;
-        // $this->isAdmin = $user->is_admin;
     }
 
     public function deleteUser(): void
     {
+        $this->authorize('manage_users');
+
         $this->validate([
             'password' => ['required', 'string', 'current_password'],
         ]);

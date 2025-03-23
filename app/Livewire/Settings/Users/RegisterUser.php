@@ -22,12 +22,18 @@ class RegisterUser extends Component
 
     public bool $isAdmin = false;
 
+    public function mount(): void
+    {
+        $this->authorize('manage_users');
+    }
 
     /**
      * Handle an incoming registration request.
      */
     public function register(): void
     {
+        $this->authorize('manage_users');
+
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],

@@ -5,7 +5,9 @@
             <x-menu-item link="{{ route('settings.password') }}">{{ __('Change Password') }}</x-menu-item>
             <x-menu-item link="{{ route('settings.delete') }}">{{ __('Delete Account') }}</x-menu-item>
             {{-- <x-menu-item link="{{ route('settings.register') }}">{{ __('New User') }}</x-menu-item> --}}
-            <x-menu-item link="{{ route('settings.users.list') }}">{{ __('Manage Users') }}</x-menu-item>
+            @can('manage_users')
+                <x-menu-item link="{{ route('settings.users.list') }}">{{ __('Manage Users') }}</x-menu-item>
+            @endcan
         </x-menu>
 
     </div>

@@ -16,6 +16,8 @@ class EditUser extends Component
 
     public function mount($id): void
     {
+        $this->authorize('manage_users');
+
         $user = User::find($id);
         $this->userId = $user->id;
         $this->name = $user->name;
@@ -25,6 +27,8 @@ class EditUser extends Component
 
     public function updateUser()
     {
+        $this->authorize('manage_users');
+
         $user = User::find($this->userId);
 
         $validated = $this->validate([
