@@ -27,6 +27,9 @@
                 <div class="xl:ml-35 p-4 text-7xl font-bold text-green-300">Willkommen</div>
             </div>
             <div class="flex h-full w-full flex-col justify-center bg-white lg:p-8">
+                <div class="flex justify-end space-x-4">
+                    <x-custom.lang-menu />
+                </div>
                 <div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <a class="z-20 flex flex-col items-center gap-2 font-medium lg:hidden" href="{{ route('home') }}"
                         wire:navigate>
