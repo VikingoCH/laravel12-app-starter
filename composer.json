@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "livewire/livewire": "^3.6",
+        "outhebox/blade-flags": "^1.5",
         "robsontenorio/mary": "V2.x-dev"
     },
     "require-dev": {

@@ -13,6 +13,12 @@ Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('home');
 
+Route::get('/lang/{locale}', function ($locale)
+{
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('lang');
+
 Route::middleware(['auth'])->group(function ()
 {
     Route::redirect('settings', 'settings/profile');

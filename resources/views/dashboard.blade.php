@@ -25,6 +25,8 @@
                     wire:model="name" />
 
                 <x-input icon-right="o-map-pin" label="Right icon" wire:model="address" />
+                <div>{{ App::currentLocale() }}</div>
+                <div>{{ session('locale') }}</div>
 
             </x-card>
         </div>

@@ -30,6 +30,7 @@
                     {{ $title ?? '' }}
                 </div>
 
+                <x-custom.lang-menu />
                 <x-theme-toggle class="btn-ghost btn-sm" darkTheme="mydark" lightTheme="mylight" />
                 <x-custom.user-menu />
             </x-slot:actions>
