@@ -1,5 +1,8 @@
-<x-layouts.app :title="__('Dashboard')">
+<x-layouts.app :title="__('Page')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
+        <x-card>
+            <x-header separator subtitle="{{ __('Page subtitle') }}" title="{{ __('Page Title') }}" />
+        </x-card>
         <div class="grid auto-rows-min gap-4 md:grid-cols-2">
             <x-card class="flex flex-col" separator shadow title="Button Styles">
 

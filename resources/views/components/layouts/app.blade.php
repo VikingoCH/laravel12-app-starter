@@ -15,21 +15,17 @@
         <x-nav full-width sticky>
 
             <x-slot:brand>
-                {{-- Drawer toggle for "main-drawer" --}}
+                {{-- Drawer toggle for "sidebar-drawer" --}}
                 <label class="mr-3 lg:hidden" for="main-drawer">
                     <x-icon class="cursor-pointer" name="o-bars-3" />
                 </label>
-
-                <x-app-brand />
+                <!-- APP LOGO -->
+                <x-app-logo />
 
             </x-slot:brand>
 
             {{-- Right side actions --}}
             <x-slot:actions>
-                <div class="mr-20 text-2xl font-extrabold uppercase">
-                    {{ $title ?? '' }}
-                </div>
-
                 <x-custom.lang-menu />
                 <x-theme-toggle class="btn-ghost btn-sm" darkTheme="mydark" lightTheme="mylight" />
                 <x-custom.user-menu />
