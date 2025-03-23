@@ -18,13 +18,13 @@
                     <span class="flex h-10 w-10 items-center justify-center rounded-md">
                         <x-app-logo-icon class="mr-2 h-7 fill-current text-white" />
                     </span>
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
-                <div class="p-4 text-6xl font-bold">Welcome</div>
-                <div class="ml-25 p-8 text-5xl font-bold text-yellow-200">Bem-vindo</div>
-                <div class="ml-10 p-4 text-7xl font-bold text-red-400">Benvenuto</div>
-                <div class="ml-20 p-4 text-6xl font-bold text-cyan-300">Bienvenido</div>
-                <div class="ml-15 p-4 text-7xl font-bold text-green-300">Willkommen</div>
+                <div class="p-4 text-6xl font-bold xl:ml-60">Welcome</div>
+                <div class="xl:ml-110 p-4 text-5xl font-bold text-yellow-200">Bem-vindo</div>
+                <div class="p-4 text-7xl font-bold text-red-400 xl:ml-20">Benvenuto</div>
+                <div class="xl:ml-85 p-4 text-6xl font-bold text-cyan-300">Bienvenido</div>
+                <div class="xl:ml-35 p-4 text-7xl font-bold text-green-300">Willkommen</div>
             </div>
             <div class="flex h-full w-full flex-col justify-center bg-white lg:p-8">
                 <div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
