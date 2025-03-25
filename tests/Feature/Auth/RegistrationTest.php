@@ -3,13 +3,15 @@
 use App\Livewire\Auth\Register;
 use Livewire\Livewire;
 
-test('registration screen can be rendered', function () {
+test('registration screen can be rendered', function ()
+{
     $response = $this->get('/register');
 
     $response->assertStatus(200);
 });
 
-test('new users can register', function () {
+test('new users can register', function ()
+{
     $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('email', 'test@example.com')
@@ -19,7 +21,7 @@ test('new users can register', function () {
 
     $response
         ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
+        ->assertRedirect(route('home', absolute: false));
 
     $this->assertAuthenticated();
 });
