@@ -7,7 +7,7 @@
             title="{{ __('Are you sure you want to delete your account?') }}" wire:model="delModal">
             <x-form no-separator wire:submit="deleteUser">
                 @csrf
-                <x-password label="{{ __('Password') }}" right wire:model="password" />
+                <x-password label="'{{ __('Password') }}'" right wire:model="password" />
                 {{-- Notice we are using now the `actions` slot from `x-form`, not from modal --}}
                 <x-slot:actions>
                     <x-button @click="$wire.delModal = false" class="grow" label="{{ __('Cancel') }}" />
@@ -16,6 +16,6 @@
             </x-form>
         </x-modal>
 
-        <x-button @click="$wire.delModal = true" class="btn-error w-full" label="{{ __('Delete account') }}" />
+        <x-button @click="$wire.delModal = true" class="btn-error w-full" label="{{ __('app.delete_account') }}" />
     </x-settings.layout>
 </section>

@@ -16,7 +16,7 @@
             <x-password label="{{ __('Password') }}" right wire:model="password" />
             <x-slot:actions>
                 <x-button class="grow" label="{{ __('Cancel') }}" link="{{ route('settings.users.list') }}" />
-                <x-button class="btn-error grow" label="{{ __('Confirm') }}" type="submit" />
+                <x-button class="btn-error grow" label="{{ __('confirm') }}" type="submit" />
             </x-slot:actions>
         </x-form>
 
