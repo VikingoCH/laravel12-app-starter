@@ -13,9 +13,9 @@ I'm a self-learning hobbyist coder, that code in my free time. I love coding! so
 
 I created this repository as a base for my web-apps.
 
-You're free to use this repository but most likely you'll find some typical amateur mistakes or not so good coding practices.... ;-)
+You're free to use this repository but most likely you'll find some typical amateur mistakes or not so good coding practices.... :wink:
 
-So, any feedback for improvement is more than welcome since will help me to on my learning... Thanks!!
+So, any feedback for improvement is more than welcome since will help me on my learning path... Thanks!!
 ___
 
 
@@ -53,8 +53,8 @@ ___
 **"Laravel Translation UI" package on first translations:import command is not reading any translation done in lang files, i.e. only reads complete en-files and the keys in another language. Therefore translations have to be done through package interface and copied back to lang folder.**
 
 So following procedure is recomended before running first import:
-1. Import en-translations from "Laravel Lang" package
-2. Use "Extract untranslated strings" package to read and clean en-translations files before importing them to "Laravel Translation UI" package.
-3. Import en-translations to "Laravel Translation UI" package and create needed trasnlations through UI.
-4. Export translations files back to he APP from "Laravel Translation UI" package.
+1. Import en-translations from `Laravel Lang` package
+2. Use `Extract untranslated strings` package to read and clean en-translations files before importing them to Laravel `Translation UI` package.
+3. Import en-translations to `Laravel Translation UI` package and create needed trasnlations through UI.
+4. Export translations files back to he APP from `Laravel Translation UI` package.
 
