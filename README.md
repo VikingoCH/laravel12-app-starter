@@ -20,7 +20,7 @@ ___
 
 
 ## Authorization
-Minimalist and simple authorizaiton implementation. 
+Minimalist and simple authorizaiton implementation using laravel gates. 
 
 ### roles
 - Admin:
@@ -44,17 +44,7 @@ ___
 - [Laravel 12] (https://laravel.com/docs/12.x)
 - [Livewire 3] (https://livewire.laravel.com/docs/quickstart)
 - [Mary-UI 2.0-Beta] (https://v2.mary-ui.com/docs/installation)
-- [language flags] (https://github.com/MohmmedAshraf/blade-flags)
-- [Laravel Lang] (https://github.com/Laravel-Lang/common) -> Import default en-files language
-- [Extract untranslated strings] (https://github.com/amiranagram/localizator) -> Used to get all english strings into en.json
-- [Laravel Translations UI ] (https://github.com/MohmmedAshraf/laravel-translations) -> To be used just before release to translate into diferent languages
-
-## Notes on Localization
-**"Laravel Translation UI" package on first translations:import command is not reading any translation done in lang files, i.e. only reads complete en-files and the keys in another language. Therefore translations have to be done through package interface and copied back to lang folder.**
-
-So following procedure is recomended before running first import:
-1. Import en-translations from `Laravel Lang` package
-2. Use `Extract untranslated strings` package to read and clean en-translations files before importing them to Laravel `Translation UI` package.
-3. Import en-translations to `Laravel Translation UI` package and create needed trasnlations through UI.
-4. Export translations files back to he APP from `Laravel Translation UI` package.
+- [language flags] (https://github.com/MohmmedAshraf/blade-flags) :arrow_right: Language Switch selector
+- [Laravel Lang] (https://github.com/Laravel-Lang/common) :arrow_right: Import default laravel files language
+- [Extract untranslated strings] (https://github.com/amiranagram/localizator) :arrow_right: Extract translation strings / keys from code and remove un-used string in translation files
 

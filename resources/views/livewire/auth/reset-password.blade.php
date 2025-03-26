@@ -6,16 +6,16 @@
 
     <x-form wire:submit="resetPassword">
         <!-- Email Address -->
-        <x-input icon="o-at-symbol" label="{{ __('Email address') }}" placeholder="email@example.com" required
-            type="email" wire:model="email" />
+        <x-input icon="o-at-symbol" label="{{ __('labels.email') }}" placeholder="email@example.com" required type="email"
+            wire:model="email" />
         <!-- Password -->
-        <x-password label="{{ __('Password') }}" placeholder="{{ __('Password') }}" required right
+        <x-password label="{{ __('labels.password') }}" placeholder="{{ __('labels.password') }}" required right
             wire:model="password" />
 
         <!-- Confirm Password -->
-        <x-password label="{{ __('Confirm password') }}" placeholder="{{ __('Confirm password') }}" required right
-            wire:model="password_confirmation" />
+        <x-password label="{{ __('labels.confirm_password') }}" placeholder="{{ __('labels.confirm_password') }}"
+            required right wire:model="password_confirmation" />
 
-        <x-button class="btn-accent w-full" label="{{ __('Reset password') }}" type="submit" />
+        <x-button class="btn-accent w-full" label="{{ __('actions.reset') }}" type="submit" />
     </x-form>
 </div>

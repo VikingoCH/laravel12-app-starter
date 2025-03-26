@@ -6,13 +6,13 @@
 
     <x-form wire:submit="sendPasswordResetLink">
         <!-- Email Address -->
-        <x-input icon="o-at-symbol" label="{{ __('Email address') }}" placeholder="email@example.com" required
-            type="email" wire:model="email" />
+        <x-input icon="o-at-symbol" label="{{ __('labels.email') }}" placeholder="email@example.com" required type="email"
+            wire:model="email" />
         <x-button class="btn-accent w-full" label="{{ __('Email password reset link') }}" type="submit" />
     </x-form>
 
     <div class="space-x-1 text-center text-sm text-zinc-400">
         {{ __('Or, return to') }}
-        <x-button class="btn-ghost text-warning" label="{{ __('Log in') }}" link="{{ route('login') }}" />
+        <x-button class="btn-ghost text-warning" label="{{ __('actions.log_in') }}" link="{{ route('login') }}" />
     </div>
 </div>

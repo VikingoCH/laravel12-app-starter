@@ -1,14 +1,12 @@
-<section class="w-full">
-    @include('partials.page-heading')
-
-    <x-settings.layout :heading="__('Profile')" :subheading="__('Update your name and email address')">
+    <x-settings.layout :heading="__('labels.users')" :subheading="__('List of registered users')">
         <div class="flex items-center justify-end">
-            <x-button class="btn-primary" link="{{ route('settings.users.register') }}">{{ __('New User') }}</x-button>
+            <x-button class="btn-primary"
+                link="{{ route('settings.users.register') }}">{{ __('actions.new_user') }}</x-button>
         </div>
         <x-table :headers="$headers" :rows="$users">
 
             @scope('cell_is_admin', $user)
-                {{ $user->is_admin ? __('Admin') : __('User') }}
+                {{ $user->is_admin ? __('labels.admin') : __('labels.user') }}
             @endscope
 
             @scope('actions', $user)
@@ -21,4 +19,3 @@
             @endscope
         </x-table>
     </x-settings.layout>
-</section>

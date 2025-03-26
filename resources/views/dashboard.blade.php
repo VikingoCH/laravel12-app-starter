@@ -1,8 +1,6 @@
 <x-layouts.app :title="__('Page')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-        <x-card>
-            <x-header separator subtitle="{{ __('Page subtitle') }}" title="{{ __('Page Title') }}" />
-        </x-card>
+        <x-page.heading :pageSubtitle="__('Page subtitle')" :pageTitle="__('Page Title')" />
         <div class="grid auto-rows-min gap-4 md:grid-cols-2">
             <x-card class="flex flex-col" separator shadow title="Button Styles">
 
@@ -24,7 +22,7 @@
             </x-card>
             <x-card class="rounded-xl border border-neutral-200 dark:border-neutral-700" separator shadow
                 title="Form Inputs">
-                <x-input hint="Your full name" icon="o-user" label="Name" placeholder="Your name"
+                <x-input hint="Your full name" icon="o-user" label="__('labels.name')" placeholder="Your name"
                     wire:model="name" />
 
                 <x-input icon-right="o-map-pin" label="Right icon" wire:model="address" />
