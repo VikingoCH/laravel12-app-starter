@@ -10,7 +10,8 @@
         </div>
         <x-form wire:submit="deleteUser">
             @csrf
-            <x-password label="{{ __('labels.password') }}" right wire:model="password" />
+            <x-password hint="{{ __('Admin Password') }}" label="{{ __('labels.password') }}" right
+                wire:model="password" />
             <x-slot:actions>
                 <x-button class="grow" label="{{ __('actions.cancel') }}" link="{{ route('settings.users.list') }}" />
                 <x-button class="btn-error grow" label="{{ __('actions.confirm') }}" type="submit" />
