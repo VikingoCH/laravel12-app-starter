@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'admin' => '',
-    'confirm_password' => '',
-    'current_password' => '',
-    'delete_account' => '',
-    'email' => '',
-    'name' => '',
-    'new_password' => '',
-    'password' => '',
-    'profile' => '',
-    'update_password' => '',
-    'user' => '',
-    'users' => '',
+    'admin' => 'Admin',
+    'confirm_password' => 'Confirme sua senha',
+    'current_password' => 'Senha atual',
+    'delete_account' => 'Excluir conta',
+    'email' => 'E-mail',
+    'name' => 'Nome',
+    'new_password' => 'Nova Senha',
+    'password' => 'Senha',
+    'profile' => 'Perfil',
+    'update_password' => 'Atualizar senha',
+    'user' => 'Usuário',
+    'users' => 'Usuários',
 ];

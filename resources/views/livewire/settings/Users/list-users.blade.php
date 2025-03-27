@@ -12,9 +12,11 @@
             @scope('actions', $user)
                 <div class="flex items-center space-x-2">
                     <x-button class="btn-xs btn-ghost text-secondary" icon="o-pencil"
-                        link="{{ route('settings.users.edit', ['id' => $user->id]) }}" spinner />
+                        link="{{ route('settings.users.edit', ['id' => $user->id]) }}" spinner
+                        tooltip="{{ __('actions.edit') }}" />
                     <x-button class="btn-xs btn-ghost text-error" icon="o-trash"
-                        link="{{ route('settings.users.delete', ['id' => $user->id]) }}" spinner />
+                        link="{{ route('settings.users.delete', ['id' => $user->id]) }}" spinner
+                        tooltip="{{ __('actions.delete') }}" />
                 </div>
             @endscope
         </x-table>
