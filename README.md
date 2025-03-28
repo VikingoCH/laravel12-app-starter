@@ -20,7 +20,9 @@ ___
 
 
 ## Authorization
-Minimalist and simple authorizaiton implementation using laravel gates. 
+Minimalist and simple authorizaiton implementation using laravel gates.
+
+A is_admin column have to be created in the users table to manage admin basic permissions.
 
 ### roles
 - Admin:
@@ -30,15 +32,6 @@ Minimalist and simple authorizaiton implementation using laravel gates.
 - User:
   - View all records
   - Add / Edit records in DB
-
-### Default users
-___
-**Admin:** admin@app.com  
-**Password:** 12345678
-___
-**User:** user@app.com  
-**Password:** 12345678
-___
 
 ## Packages
 - [Laravel 12] (https://laravel.com/docs/12.x)
