@@ -25,11 +25,11 @@ Minimalist and simple authorizaiton implementation using laravel gates.
 A is_admin column have to be created in the users table to manage admin basic permissions.
 
 ### roles
-- Admin:
+- Admin (is_admin => True):
   - Manage App setting
   - Add / Delete users
   - View / Add / Edit / Delete all records in DB
-- User:
+- User (is_admin => False):
   - View all records
   - Add / Edit records in DB
 
