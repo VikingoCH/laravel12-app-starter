@@ -26,16 +26,15 @@
                 <div class="xl:ml-35 p-4 text-7xl font-bold text-green-300">Willkommen</div>
             </div>
             <div class="flex h-full w-full flex-col justify-center bg-white lg:p-8">
-                <div class="flex justify-end space-x-4">
-                    <x-menus.lang-menu />
-                </div>
-                <div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+                <div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[500px]">
                     <div class="lg:hidden">
                         <x-app-logo class="flex-col items-center" />
-
                     </div>
 
                     {{ $slot }}
+                </div>
+                <div class="mt-10 flex justify-end space-x-4">
+                    <x-menus.lang-menu />
                 </div>
             </div>
         </div>
