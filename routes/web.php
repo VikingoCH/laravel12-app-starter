@@ -9,9 +9,9 @@ use App\Livewire\Settings\Users\EditUser;
 use App\Livewire\Settings\Users\RegisterUser;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('home');
+// Route::view('/', 'home')
+//     ->middleware(['auth', 'verified'])
+//     ->name('home');
 
 Route::get('/lang/{locale}', function ($locale)
 {
@@ -21,6 +21,8 @@ Route::get('/lang/{locale}', function ($locale)
 
 Route::middleware(['auth'])->group(function ()
 {
+    Route::view('/', 'home')->name('home');
+
     Route::redirect('settings', 'settings/profile');
 
     Route::get('settings/profile', Profile::class)->name('settings.profile');

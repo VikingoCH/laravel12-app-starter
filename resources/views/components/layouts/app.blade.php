@@ -9,7 +9,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
-    <body class="bg-base-300 font-sans antialiased">
+    <body class="bg-base-200/50 dark:bg-base-200/50 font-[verdana] antialiased">
 
         {{-- The navbar with `sticky` and `full-width` --}}
         <x-nav full-width sticky>
@@ -27,7 +27,7 @@
             {{-- Right side actions --}}
             <x-slot:actions>
                 <x-menus.lang-menu />
-                <x-theme-toggle class="btn-ghost btn-sm" darkTheme="mydark" lightTheme="mylight" />
+                <x-theme-toggle class="btn-ghost btn-sm" darkTheme="dark" lightTheme="light" />
                 <x-menus.user-menu />
             </x-slot:actions>
         </x-nav>
@@ -37,7 +37,7 @@
 
             {{-- This is a sidebar that works also as a drawer on small screens --}}
             {{-- Notice the `main-drawer` reference here --}}
-            <x-slot:sidebar class="bg-base-200" collapsible drawer="main-drawer">
+            <x-slot:sidebar class="bg-base-300" collapsible drawer="main-drawer">
 
                 {{-- Activates the menu item when a route matches the `link` property --}}
                 <x-menu :title="null" activate-by-route>

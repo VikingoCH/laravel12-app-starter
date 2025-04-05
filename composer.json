@@ -16,7 +16,7 @@
         "livewire/flux": "^2.0",
         "livewire/livewire": "^3.6",
         "outhebox/blade-flags": "^1.5",
-        "robsontenorio/mary": "V2.x-dev"
+        "robsontenorio/mary": "^2.0"
     },
     "require-dev": {
         "amirami/localizator": "^0.14.0@alpha",
